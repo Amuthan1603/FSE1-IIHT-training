@@ -1,0 +1,23 @@
+<button (click)="toggle()">Flag: {{flag}}</button>
+
+<p *ngIf="message.length > 0">{{message}}</p>
+<p *ngIf="!!message.length">{{message}}</p>
+
+<hr/>
+<p *ngIf="!message.length">Hurrey...</p>
+<hr/>
+
+<table border="1" width="100%">
+    <tr>
+        <td>S.No.</td>
+        <td>Id</td>
+        <td>Titile</td>
+        <td>Author</td>
+    </tr>
+    <tr *ngFor="let book of books;let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+    </tr>
+</table>

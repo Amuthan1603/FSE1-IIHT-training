@@ -1,0 +1,45 @@
+GET http://localhost:8080/books 
+
+### 
+
+GET http://localhost:8080/books/1
+
+### 
+
+POST http://localhost:8080/books 
+content-type: application/json
+
+{
+    "author": "Me",
+    "title": "My book",
+    "price": 9
+}
+### 
+POST http://localhost:8080/books 
+content-type: application/json
+
+{
+    "author": "We",
+    "title": "Our book",
+    "price": 51
+}
+### 
+POST http://localhost:8080/books 
+content-type: application/json
+
+{
+    "author": "She",
+    "title": "Her book",
+    "price": 15
+}
+### 
+POST http://localhost:8080/books 
+content-type: application/json
+
+{
+    "author": "He",
+    "title": "His book",
+    "price": 21
+}
+### 
+

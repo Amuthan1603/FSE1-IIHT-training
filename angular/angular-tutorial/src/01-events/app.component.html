@@ -1,0 +1,14 @@
+<button (click)="increase()">Increment</button>
+<button (click)="decrease()">Decrement</button>
+
+<h2>Number: {{num}}</h2>
+
+<input type="number" [value]="num" #currentElement (focus)="reset()" (change)="onInputChange(+currentElement.value)" />
+
+<hr/>
+
+<input type="number" [value]="num"  #secInput (keyup)="onInputChange(+secInput.value)" />
+
+<hr/>
+
+<input type="number" [(ngModel)]="num" />

@@ -1,0 +1,16 @@
+<button (click)="toggle()">Flag: {{flag}}</button>
+<ul>
+    <li>ngClass demos</li>
+    <li [ngClass]="'error'">List no 1</li>
+    <li [ngClass]="'success'">List no 2</li>
+    <li [ngClass]="myClass">List no 3</li>
+    <li [ngClass]="flag ? 'error':'success'">List no 4</li>
+</ul>
+
+<button (click)="toggle()">Flag: {{flag}}</button>
+<ul>
+    <li>ngStyle demos</li>
+    <li [ngStyle]="myStyle">List no 1</li>
+    <li [ngStyle]="{color: 'red'}">List no 2</li>
+    <li [ngStyle]="{color: flag?'green':'red'}">List no 3</li>
+</ul>

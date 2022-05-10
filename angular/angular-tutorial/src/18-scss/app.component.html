@@ -1,0 +1,31 @@
+<div>
+    <h1>Login Page</h1>
+
+    <ul>
+        <li>myForm.valid: {{myForm.valid}}</li>
+        <li>myForm.invalid: {{myForm.invalid}}</li>
+        <li>myForm.controls.email.errors: {{myForm.controls.email.errors | json}}</li>
+        <li>myForm.controls.email.valid: {{myForm.controls.email.valid}}</li>
+        <li>myForm.controls.email.invalid: {{myForm.controls.email.invalid}}</li>
+        <li>myForm.controls.email.dirty: {{myForm.controls.email.dirty}}</li>
+        <li>myForm.controls.email.pristine: {{myForm.controls.email.pristine}}</li>
+        <li>myForm.controls.email.touched: {{myForm.controls.email.touched}}</li>
+    </ul>
+
+    <form [formGroup]="myForm" (ngSubmit)="getLogin()">
+        <div>
+            <label for="">Username: </label>
+            <input formControlName="email" type="text" />
+            <p class="error" *ngIf="myForm.controls.email.dirty && !!myForm.controls.email.errors">
+                <span *ngIf="!!myForm.controls.email.errors.required">Email id can not be empty</span>
+                <span *ngIf="!!myForm.controls.email.errors.pattern">Email id is not valid</span>
+            </p>
+        </div>
+        <div>
+            <label for="">Password: </label>
+            <input formControlName="password" type="text" />
+        </div>
+        
+        <button [disabled]="myForm.invalid" type="submit">Login</button>
+    </form>
+</div>

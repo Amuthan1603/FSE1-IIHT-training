@@ -1,0 +1,14 @@
+install in linux
+- apt
+- apt-get
+- yum
+
+
+
+sudo yum install java-1.8.0-openjdk
+sudo yum install java-1.8.0-openjdk-devel
+
+
+gdrive, onedrive, github, S3 (AWS)
+
+$ wget link

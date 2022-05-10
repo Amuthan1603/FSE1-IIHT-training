@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "Product",
+  "description": "A product in the catalog",
+  "type": "object"
+}
+
+
+http://json-schema.org/learn/getting-started-step-by-step
+
+
+{
+    "userId": 1,
+    "title": "qui est esse",
+    "status": "progress",
+    "body": "est rerum tempore"
+  }
+  
+  
+ {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://example.com/product.schema.json",
+   "title": "Demo",
+   "description": "A demo in the catalog",
+   "type": "object",
+   "properties": {
+      
+     "userId": {"type": "integer"},
+     "title": {"type": "string"},
+     "status": {"type": "string", "enum": ["progress", "pending", "complete"]},
+     "body": {"type": "string"}
+   
+   },
+   
+   "required": ["userId", "title"]
+}

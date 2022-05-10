@@ -1,0 +1,16 @@
+p{
+    color: green;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+ul > li{
+    list-style: none; 
+    display: inline;   
+    border-right: 2px solid black;
+    padding: 2px 5px;
+}
+
+header{
+    border: 5px solid black;
+}

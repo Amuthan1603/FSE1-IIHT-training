@@ -1,0 +1,29 @@
+
+mysql version: 5.6
+
+ip: myrdsdb.ca6fijkjexxt.us-east-1.rds.amazonaws.com
+
+dbname: myrdsdb
+user: admin
+pwd: admin#123
+port: 3306
+
+
+security group -> inbound rules -> edit
+    protocol
+    location/ip - anyone from anywhere
+    port 
+
+Connect using mysql cli:
+    $ mysql --host localhost --port 3306 -u root -proot
+    $ mysql --host myrdsdb.ca6fijkjexxt.us-east-1.rds.amazonaws.com --port 3306 -u admin -padmin#123
+
+
+Import
+    $ mysql -u root -p [dbname] < dumpfile.sql
+    $ mysql -u root -p library < awsrdsdump.sql
+    $ mysql -h demo-db.ca6fijkjexxt.us-east-1.rds.amazonaws.com -u admin -p movies < movies_db.sql
+
+Export
+    $ mysqldump -u root [database_name] -p > [dumpfilename.sql]
+    $ mysqldump --host demo-db.ca6fijkjexxt.us-east-1.rds.amazonaws.com -u admin library -p > awsrdsdump.sql

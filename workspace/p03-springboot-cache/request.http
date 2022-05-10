@@ -1,0 +1,32 @@
+GET http://localhost:9090/books
+
+###
+
+GET http://localhost:9090/books/4
+
+
+###
+POST http://localhost:9090/books
+content-type: application/json
+
+{
+    "author": "Awesome",
+    "title": "This is awesome book",
+    "price": 40
+}
+
+###
+
+DELETE http://localhost:9090/books/4
+
+
+###
+PUT http://localhost:9090/books/1
+content-type: application/json
+
+{
+    "author": "Awesome",
+    "title": "This is awesome book",
+    "price": 40
+}
+

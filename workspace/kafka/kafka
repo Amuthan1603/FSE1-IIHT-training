@@ -1,0 +1,52 @@
+https://kafka.apache.org/downloads
+    downloads  
+        Binary downloads
+            scala (latest version)
+
+
+
+kafka/config
+    server.properties
+        log-dirs=/tmp/kafka-logs
+        to 
+        log-dirs=~kafka/path/kafka-logs 
+
+    zookeeper.properties
+        dataDir=/tmp/zookeeper
+        to 
+        dataDir=~kafka/path/zookeeper-data 
+
+Start zookeeper
+-------------
+    $ ./bin/windows/zookeeper-server-start.bat ./config/zookeeper.properties
+        zookeeper--> 2181
+    
+
+Start kafka
+-------------
+    $ ./bin/windows/kafka-server-start.bat ./config/server.properties 
+
+    kafka --> 9092
+
+Create topic 
+--------------
+    $ ./bin/windows/kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kafka_topic_name
+    $ ./bin/windows/kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kafka_topic
+
+
+List topics
+--------------
+    $ ./bin/windows/kafka-topics.bat --list --zookeeper localhost:2181
+
+
+Produce 
+----------
+    $ ./bin/windows/kafka-console-producer.bat --broker-list localhost:9092 --topic kafka_topic
+
+
+Consume
+---------------
+    $ ./bin/windows/kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafka_topic --from-beginning 
+    
+
+ 

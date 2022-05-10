@@ -1,0 +1,18 @@
+GET http://localhost:8080/api/v1/hello
+
+### 
+GET http://localhost:8080/api/v1/greet
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJjb3VudHJ5IjoiSmFwYW4iLCJzdWIiOiJkZW1vIiwicm9sZSI6Imd1ZXN0IiwibGFuZ3VhZ2UiOiJqYXBhbmVzZSIsImV4cCI6MTYyODg2ODQ2NCwiaWF0IjoxNjI4ODUwNDY0fQ.0dMBR4HvL9q54ZPcnlf9YdQVNxKLDdgY1FUy2GdNzJt-c811MDmuvBtv8dIGUXhm3HzYmfez1Nex7m01nd9yng
+
+###
+
+POST http://localhost:8080/authenticate
+content-type: application/json
+
+{
+    "username": "demo",
+    "password": "demo@123"
+}
+
+
+

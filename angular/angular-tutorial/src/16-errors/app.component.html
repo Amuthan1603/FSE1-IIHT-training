@@ -1,0 +1,41 @@
+<div *ngIf="!!errorMessage">
+    <p class="error">{{errorMessage}}</p>
+</div>
+
+<div *ngIf="!errorMessage">
+    
+<button (click)="showAllBooks()">Show All Books</button>
+<button (click)="showForm()">Add</button>
+
+<form [formGroup]="bookForm" (ngSubmit)="saveBook()" *ngIf="showBookFormFlag">
+    <label>Title: </label><input type="text" formControlName="title" /><br/>
+    <label>Author: </label><input type="text" formControlName="author" /><br/>
+    <label>Price: </label><input type="text" formControlName="price" /><br/>
+
+    <input type="submit" value="Save" />
+</form>
+<button *ngIf="showBookFormFlag" (click)="showBookFormFlag=false">Cancel</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td><button (click)="gotoEditPage(book)">Edit</button></td>
+            <td><button (click)="deleteBook(book.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

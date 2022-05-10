@@ -1,0 +1,64 @@
+{
+  "users": [],
+  "errors": [
+    {
+      "message": "some error occurred",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2021-08-05T12:22:20.675Z",
+      "fileName": "main.js",
+      "lineNumber": "209",
+      "id": 1
+    },
+    {
+      "message": "some error occurred",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2021-08-05T12:23:01.434Z",
+      "fileName": "main.js",
+      "lineNumber": "209",
+      "id": 2
+    },
+    {
+      "message": "some error occurred",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2021-08-05T12:23:10.249Z",
+      "fileName": "main.js",
+      "lineNumber": "209",
+      "id": 3
+    }
+  ],
+  "books": [
+    {
+      "title": "This is your book",
+      "author": "You",
+      "price": "15",
+      "id": 3
+    },
+    {
+      "title": "This is her book",
+      "author": "She",
+      "price": "25",
+      "id": 4
+    },
+    {
+      "title": "This is our book",
+      "author": "We",
+      "price": "99",
+      "id": 7
+    },
+    {
+      "title": "This is demo book",
+      "author": "Demo",
+      "price": "5",
+      "id": 8
+    },
+    {
+      "title": "This is my book",
+      "author": "Me",
+      "price": "15",
+      "id": 9
+    }
+  ]
+}

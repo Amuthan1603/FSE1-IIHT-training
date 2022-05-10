@@ -1,0 +1,21 @@
+open cmd
+$ npm init -y
+$ npm install json-server
+
+package.json 
+    "scripts":  {
+        "start": "json-server --watch mydb.json"
+    }
+
+$ create file > mydb.json
+    {
+        "users": [],
+        "books": [
+            { "id": 1, "title": "some title", "author": "Mark", "price": 65 }
+        ]
+    }
+
+$ npm start
+localhost:3000
+            /users
+            /books

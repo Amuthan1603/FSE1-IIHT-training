@@ -1,0 +1,21 @@
+$val: 1px;
+div {
+    background-color: gray;
+    border-radius: $val;
+    padding: $val*2;
+    margin: $val;
+    h1{
+        text-align: center;
+        color: white;
+        background-color: black;
+        border-radius: $val*5;
+    }
+    ul{
+        li{
+            border: $val solid white;
+            word-wrap: break-word;
+            margin: $val;
+            border-radius: $val*4;
+        }
+    }
+}
